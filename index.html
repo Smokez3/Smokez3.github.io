@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- =============================================
+       TÍTULO DA ABA DO NAVEGADOR
+       Troque "Davi Lopes" pelo seu nome/handle
+  ============================================= -->
+  <title>Davi Lopes // Cybersecurity</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- =============================================
+       TELA DE BOOT (animação inicial)
+       Edite o texto do terminal se quiser
+  ============================================= -->
+  <div id="boot-screen">
+    <div class="boot-content">
+      <p class="boot-line" id="b1">Initializing system...</p>
+      <p class="boot-line" id="b2">Loading security modules... <span class="ok">[OK]</span></p>
+      <p class="boot-line" id="b3">Mounting encrypted volumes... <span class="ok">[OK]</span></p>
+      <p class="boot-line" id="b4">Starting kernel... <span class="ok">[OK]</span></p>
+      <p class="boot-line" id="b5">Access granted. Welcome, operator.</p>
+    </div>
+  </div>
+
+  <!-- ============================
+       CONTEÚDO PRINCIPAL DO SITE
+  ============================ -->
+  <div id="main" class="hidden">
+
+    <!-- ==================================
+         BARRA DE NAVEGAÇÃO (TOPO)
+         Edite os links conforme necessário
+    ================================== -->
+    <nav id="navbar">
+      <span class="nav-prompt">root@smokez3:~$</span>
+      <ul>
+        <li><a href="#sobre">sobre</a></li>
+        <li><a href="#habilidades">skills</a></li>
+        <li><a href="#certs">certs</a></li>
+        <li><a href="#projetos">projetos</a></li>
+        <li><a href="#contato">contato</a></li>
+      </ul>
+    </nav>
+
+    <!-- =============================================
+         SEÇÃO HERO (apresentação principal)
+         Edite: nome, handle, cargo e descrição
+    ============================================= -->
+    <section id="hero">
+      <div class="hero-left">
+        <p class="hero-tag">// defesa cibernética</p>
+
+        <!-- SEU NOME PRINCIPAL -->
+        <h1 id="typed-name">Davi Lopes</h1>
+
+        <!-- SEU HANDLE / APELIDO -->
+        <p class="hero-handle">@Smokez3</p>
+
+        <!-- CARGO / ESPECIALIDADE -->
+        <p class="hero-role">Red Team · Pentest · Cyber Intel</p>
+
+        <!-- BREVE DESCRIÇÃO SOBRE VOCÊ -->
+        <p class="hero-desc">
+          Tecnólogo em Defesa Cibernética pela FIAP. Foco em testes de invasão,
+          análise de vulnerabilidades e inteligência cibernética. Certificado
+          com Selo Ouro em Pentest, Forensics e Cyber Intel.
+        </p>
+
+        <!-- BOTÕES DE AÇÃO -->
+        <div class="hero-btns">
+          <!-- Troque o href pelo link do seu currículo ou PDF -->
+          <a href="#contato" class="btn-primary">[ contato ]</a>
+          <!-- Troque pelo link do seu GitHub real -->
+          <a href="https://github.com/Smokez3" target="_blank" class="btn-secondary">[ github ]</a>
+        </div>
+      </div>
+
+      <!-- BLOCO DE TERMINAL DECORATIVO (lado direito) -->
+      <div class="hero-right">
+        <div class="terminal-box">
+          <div class="terminal-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">terminal — bash</span>
+          </div>
+          <div class="terminal-body">
+            <p><span class="prompt">$</span> whoami</p>
+            <p class="out">davi_lopes // smokez3</p>
+            <p><span class="prompt">$</span> cat perfil.txt</p>
+            <p class="out">→ Red Team Operator</p>
+            <p class="out">→ Penetration Tester</p>
+            <p class="out">→ Cyber Intel Analyst</p>
+            <p><span class="prompt">$</span> cat localização.txt</p>
+            <p class="out">Barbacena, MG — Brasil</p>
+            <p><span class="prompt">$</span> echo $STATUS</p>
+            <p class="out green-text">DISPONÍVEL PARA OPORTUNIDADES</p>
+            <p><span class="prompt blink">█</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         SEÇÃO SOBRE MIM
+         Edite o texto e os dados de formação
+    ============================================= -->
+    <section id="sobre">
+      <div class="section-header">
+        <span class="section-cmd">$ cat sobre.md</span>
+        <h2>// sobre mim</h2>
+      </div>
+
+      <div class="sobre-grid">
+        <div class="sobre-text">
+          <!-- TEXTO DE APRESENTAÇÃO - edite livremente -->
+          <p>
+            Profissional de Segurança da Informação com formação em Defesa Cibernética
+            pela FIAP. Tenho foco em operações ofensivas, incluindo Red Team, testes de
+            invasão e análise de vulnerabilidades.
+          </p>
+          <p>
+            Possuo experiência prática com ferramentas líderes do mercado como Kali Linux,
+            Metasploit, Burp Suite e Wireshark, além de conhecimentos em engenharia social,
+            privilege escalation e OSINT.
+          </p>
+          <p>
+            Busco oportunidades para aplicar técnicas de segurança ofensiva e defensiva
+            em ambientes reais, contribuindo para a proteção de sistemas e dados.
+          </p>
+        </div>
+
+        <div class="sobre-info">
+          <!-- DADOS PESSOAIS - edite conforme necessário -->
+          <div class="info-item">
+            <span class="info-label">// formação</span>
+            <span class="info-value">Tecnólogo em Defesa Cibernética — FIAP (2024)</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">// localização</span>
+            <span class="info-value">Barbacena, MG — Brasil</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">// idiomas</span>
+            <span class="info-value">Português (Nativo) · Inglês (Intermediário)</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">// foco atual</span>
+            <span class="info-value">Red Team · Pentest · Cyber Intelligence</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">// objetivo</span>
+            <span class="info-value">Defesa Cibernética — Red Team e Testes de Invasão</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         SEÇÃO HABILIDADES
+         Adicione/remova skills conforme evoluir
+    ============================================= -->
+    <section id="habilidades">
+      <div class="section-header">
+        <span class="section-cmd">$ nmap --skills davi_lopes</span>
+        <h2>// habilidades</h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- CATEGORIA 1 -->
+        <div class="skill-category">
+          <p class="skill-cat-title">[ cibersegurança ]</p>
+          <ul>
+            <!-- Adicione ou remova itens conforme necessário -->
+            <li>Testes de invasão (Pentest)</li>
+            <li>Análise de vulnerabilidades</li>
+            <li>Resposta a incidentes</li>
+            <li>Engenharia social</li>
+            <li>Privilege escalation</li>
+          </ul>
+        </div>
+
+        <!-- CATEGORIA 2 -->
+        <div class="skill-category">
+          <p class="skill-cat-title">[ ferramentas ]</p>
+          <ul>
+            <!-- Adicione ou remova ferramentas conforme necessário -->
+            <li>Kali Linux</li>
+            <li>Metasploit</li>
+            <li>Burp Suite</li>
+            <li>Wireshark</li>
+            <li>Nmap</li>
+            <li>OSINT · SIEM</li>
+          </ul>
+        </div>
+
+        <!-- CATEGORIA 3 -->
+        <div class="skill-category">
+          <p class="skill-cat-title">[ programação ]</p>
+          <ul>
+            <!-- Adicione ou remova linguagens conforme necessário -->
+            <li>Python</li>
+            <li>Bash scripting</li>
+            <li>PowerShell</li>
+          </ul>
+        </div>
+
+        <!-- CATEGORIA 4 -->
+        <div class="skill-category">
+          <p class="skill-cat-title">[ cloud & infra ]</p>
+          <ul>
+            <!-- Adicione ou remova tecnologias conforme necessário -->
+            <li>Docker</li>
+            <li>AWS</li>
+            <li>Azure</li>
+            <li>Virtualização</li>
+          </ul>
+        </div>
+
+        <!-- CATEGORIA 5 -->
+        <div class="skill-category">
+          <p class="skill-cat-title">[ normas ]</p>
+          <ul>
+            <!-- Adicione ou remova normas conforme necessário -->
+            <li>LGPD</li>
+            <li>ISO 27001</li>
+            <li>NIST Framework</li>
+          </ul>
+        </div>
+
+        <!-- CATEGORIA 6 -->
+        <div class="skill-category">
+          <p class="skill-cat-title">[ red team ]</p>
+          <ul>
+            <!-- Adicione ou remova técnicas conforme necessário -->
+            <li>Exploração de falhas</li>
+            <li>Recon & OSINT</li>
+            <li>Web App Fuzzing (ffuf)</li>
+            <li>Phishing & Engenharia Social</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =============================================
+         SEÇÃO CERTIFICAÇÕES
+         Adicione novas certs conforme conquistar
+    ============================================= -->
+    <section id="certs">
+      <div class="section-header">
+        <span class="section-cmd">$ ls -la ./certificacoes/</span>
+        <h2>// certificações</h2>
+      </div>
+
+      <div class="certs-grid">
+
+        <!-- CERTIFICAÇÃO 1 — edite nome, emissor, ano, nível -->
+        <div class="cert-card">
+          <span class="cert-level gold">OURO</span>
+          <p class="cert-name">Inteligência e Contrainteligência Cibernética</p>
+          <p class="cert-issuer">FIAP · 2024</p>
+        </div>
+
+        <!-- CERTIFICAÇÃO 2 -->
+        <div class="cert-card">
+          <span class="cert-level gold">OURO</span>
+          <p class="cert-name">Forensics</p>
+          <p class="cert-issuer">FIAP · 2024</p>
+        </div>
+
+        <!-- CERTIFICAÇÃO 3 -->
+        <div class="cert-card">
+          <span class="cert-level gold">OURO</span>
+          <p class="cert-name">Penetration Testing</p>
+          <p class="cert-issuer">FIAP · 2024</p>
+        </div>
+
+        <!-- CERTIFICAÇÃO 4 -->
+        <div class="cert-card">
+          <span class="cert-level gold">OURO</span>
+          <p class="cert-name">Teste de Análise de Vulnerabilidade e Invasão</p>
+          <p class="cert-issuer">FIAP · 2024</p>
+        </div>
+
+        <!-- CERTIFICAÇÃO 5 -->
+        <div class="cert-card">
+          <span class="cert-level silver">PRATA</span>
+          <p class="cert-name">Cibersegurança</p>
+          <p class="cert-issuer">FIAP · 2023</p>
+        </div>
+
+        <!-- CERTIFICAÇÃO 6 -->
+        <div class="cert-card">
+          <span class="cert-level silver">PRATA</span>
+          <p class="cert-name">Gestão de Segurança da Informação</p>
+          <p class="cert-issuer">FIAP · 2023</p>
+        </div>
+
+        <!-- ADICIONE NOVAS CERTIFICAÇÕES AQUI seguindo o mesmo padrão:
+        <div class="cert-card">
+          <span class="cert-level gold">OURO</span>
+          <p class="cert-name">Nome da Certificação</p>
+          <p class="cert-issuer">Emissor · Ano</p>
+        </div>
+        -->
+
+      </div>
+    </section>
+
+    <!-- =============================================
+         SEÇÃO PROJETOS / EXPERIÊNCIA
+         Adicione novos projetos conforme desenvolver
+    ============================================= -->
+    <section id="projetos">
+      <div class="section-header">
+        <span class="section-cmd">$ git log --projects</span>
+        <h2>// projetos & experiência</h2>
+      </div>
+
+      <div class="projects-list">
+
+        <!-- PROJETO 1 — edite título, tags, descrição e link -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-id">01</span>
+            <h3 class="project-title">API Anti-Fraude com IA — Axur</h3>
+            <span class="project-year">2024</span>
+          </div>
+          <p class="project-desc">
+            Desenvolvimento de uma API com Inteligência Artificial para analisar e
+            combater fraudes no WhatsApp. Aplicação de técnicas de segurança ofensiva
+            e defensiva no projeto.
+          </p>
+          <div class="project-tags">
+            <!-- Edite as tags conforme as tecnologias usadas -->
+            <span class="tag">Python</span>
+            <span class="tag">IA</span>
+            <span class="tag">Segurança Ofensiva</span>
+            <span class="tag">Segurança Defensiva</span>
+          </div>
+          <!-- Se tiver link do projeto, troque o # pelo URL -->
+          <!-- <a href="#" class="project-link">[ ver projeto ]</a> -->
+        </div>
+
+        <!-- PROJETO 2 -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-id">02</span>
+            <h3 class="project-title">Ambiente Seguro — ManageEngine</h3>
+            <span class="project-year">2023</span>
+          </div>
+          <p class="project-desc">
+            Configuração de ambiente seguro utilizando soluções ManageEngine.
+            Implementação de práticas de segurança para fortalecer a proteção
+            de sistemas corporativos.
+          </p>
+          <div class="project-tags">
+            <span class="tag">ManageEngine</span>
+            <span class="tag">Hardening</span>
+            <span class="tag">Segurança Defensiva</span>
+          </div>
+        </div>
+
+        <!-- PROJETO 3 -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-id">03</span>
+            <h3 class="project-title">Web Fuzzing — Hack The Box</h3>
+            <span class="project-year">2024</span>
+          </div>
+          <p class="project-desc">
+            Conclusão do módulo "Attacking Web Applications with Ffuf" na plataforma
+            Hack The Box. Uso da ferramenta Ffuf para fuzzing em aplicações web,
+            identificação de diretórios ocultos e exploração de vulnerabilidades.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Ffuf</span>
+            <span class="tag">Web Fuzzing</span>
+            <span class="tag">Hack The Box</span>
+            <span class="tag">Recon</span>
+          </div>
+          <!-- Link externo de perfil HtB se tiver -->
+          <!-- <a href="#" class="project-link" target="_blank">[ ver perfil HTB ]</a> -->
+        </div>
+
+        <!-- ADICIONE NOVOS PROJETOS AQUI seguindo o mesmo padrão:
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-id">04</span>
+            <h3 class="project-title">Nome do Projeto</h3>
+            <span class="project-year">Ano</span>
+          </div>
+          <p class="project-desc">Descrição do projeto...</p>
+          <div class="project-tags">
+            <span class="tag">Tag1</span>
+            <span class="tag">Tag2</span>
+          </div>
+          <a href="https://link-do-projeto.com" class="project-link" target="_blank">[ ver projeto ]</a>
+        </div>
+        -->
+
+      </div>
+    </section>
+
+    <!-- =============================================
+         SEÇÃO CONTATO
+         Edite os links das redes sociais
+    ============================================= -->
+    <section id="contato">
+      <div class="section-header">
+        <span class="section-cmd">$ ssh contact@davi-lopes.dev</span>
+        <h2>// contato</h2>
+      </div>
+
+      <div class="contato-grid">
+
+        <!-- Troque pelo seu email real -->
+        <a href="mailto:zsmokez1010@gmail.com" class="contato-card">
+          <span class="contato-icon">[ @ ]</span>
+          <span class="contato-label">email</span>
+          <span class="contato-value">zsmokez1010@gmail.com</span>
+        </a>
+
+        <!-- Troque pelo link do seu LinkedIn -->
+        <a href="https://linkedin.com/in/davi-simões-b999a9266" target="_blank" class="contato-card">
+          <span class="contato-icon">[ in ]</span>
+          <span class="contato-label">linkedin</span>
+          <span class="contato-value">davi-simões-b999a9266</span>
+        </a>
+
+        <!-- Troque pelo link do seu GitHub -->
+        <a href="https://github.com/Smokez3" target="_blank" class="contato-card">
+          <span class="contato-icon">[ gh ]</span>
+          <span class="contato-label">github</span>
+          <span class="contato-value">github.com/Smokez3</span>
+        </a>
+
+        <!-- SE TIVER TELEGRAM, descomente e edite:
+        <a href="https://t.me/seuhandle" target="_blank" class="contato-card">
+          <span class="contato-icon">[ tg ]</span>
+          <span class="contato-label">telegram</span>
+          <span class="contato-value">@seuhandle</span>
+        </a>
+        -->
+
+      </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+      <p>
+        <!-- Troque pelo seu nome/handle -->
+        <span class="prompt">root@smokez3:~$</span>
+        Davi Lopes © 2025 · Todos os direitos reservados
+      </p>
+      <p class="footer-status">[ SYSTEM_STATUS: ONLINE ] [ SECURITY_LEVEL: MAXIMUM ]</p>
+    </footer>
+
+  </div><!-- fim #main -->
+
+  <script src="js/main.js"></script>
+</body>
+</html>

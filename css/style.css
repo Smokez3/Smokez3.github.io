@@ -1,0 +1,677 @@
+/* =============================================
+   PORTFÓLIO — DAVI LOPES // CYBERSECURITY
+   style.css
+
+   COMO EDITAR CORES:
+   Todas as cores principais estão nas variáveis
+   abaixo (:root). Mude aqui para alterar o tema.
+============================================= */
+
+:root {
+  /* COR DE FUNDO PRINCIPAL */
+  --bg: #0a0a0a;
+
+  /* COR DE FUNDO SECUNDÁRIA (cards, painéis) */
+  --bg2: #111111;
+
+  /* COR DE FUNDO TERCIÁRIA (hover, borders) */
+  --bg3: #1a1a1a;
+
+  /* COR PRIMÁRIA (destaques, verde hacker) */
+  --green: #00ff88;
+
+  /* COR PRIMÁRIA MAIS ESCURA (hover do verde) */
+  --green-dark: #00cc6a;
+
+  /* COR DO TEXTO PRINCIPAL */
+  --text: #e0e0e0;
+
+  /* COR DO TEXTO SECUNDÁRIO (muted) */
+  --muted: #666666;
+
+  /* COR DE BORDA */
+  --border: #222222;
+
+  /* FONTE MONO (terminal) */
+  --font: 'Courier New', Courier, monospace;
+}
+
+/* =============================================
+   RESET & BASE
+============================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 14px;
+  line-height: 1.7;
+  cursor: default;
+}
+
+a {
+  color: var(--green);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--green-dark);
+}
+
+/* =============================================
+   TELA DE BOOT
+============================================= */
+#boot-screen {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.8s ease;
+}
+
+#boot-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.boot-content {
+  max-width: 500px;
+  width: 100%;
+  padding: 2rem;
+}
+
+.boot-line {
+  opacity: 0;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+  animation: fadeIn 0.3s forwards;
+}
+
+/* Delays para cada linha do boot */
+#b1 { animation-delay: 0.2s; }
+#b2 { animation-delay: 0.8s; }
+#b3 { animation-delay: 1.4s; }
+#b4 { animation-delay: 2.0s; }
+#b5 { animation-delay: 2.6s; color: var(--green); }
+
+.ok {
+  color: var(--green);
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* =============================================
+   CONTEÚDO PRINCIPAL
+============================================= */
+#main.hidden {
+  display: none;
+}
+
+#main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* =============================================
+   NAVBAR
+============================================= */
+#navbar {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 100;
+}
+
+.nav-prompt {
+  color: var(--green);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+#navbar ul li a {
+  color: var(--muted);
+  font-size: 13px;
+  transition: color 0.2s;
+}
+
+#navbar ul li a:hover {
+  color: var(--green);
+}
+
+/* =============================================
+   SEÇÃO HERO
+============================================= */
+#hero {
+  display: grid;
+  /* 2 colunas: texto | terminal */
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: 90vh;
+  padding: 4rem 0;
+}
+
+.hero-tag {
+  color: var(--green);
+  font-size: 12px;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1em;
+}
+
+/* NOME PRINCIPAL - tamanho grande */
+#hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.hero-handle {
+  color: var(--green);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-role {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.hero-desc {
+  color: var(--text);
+  font-size: 14px;
+  max-width: 480px;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+/* BOTÕES DA HERO */
+.hero-btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: var(--green);
+  color: #000000;
+  padding: 0.6rem 1.5rem;
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 700;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-primary:hover {
+  background: var(--green-dark);
+  color: #000000;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.6rem 1.5rem;
+  font-family: var(--font);
+  font-size: 13px;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.btn-secondary:hover {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+/* CAIXA TERMINAL (lado direito da hero) */
+.terminal-box {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.6rem 1rem;
+  background: var(--bg3);
+  border-bottom: 1px solid var(--border);
+}
+
+/* BOLINHAS DECORATIVAS DO TERMINAL */
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.dot.red    { background: #ff5f57; }
+.dot.yellow { background: #febc2e; }
+.dot.green  { background: #28c840; }
+
+.terminal-title {
+  color: var(--muted);
+  font-size: 12px;
+  margin-left: 0.5rem;
+}
+
+.terminal-body {
+  padding: 1.5rem;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.terminal-body .prompt {
+  color: var(--green);
+  margin-right: 0.5rem;
+}
+
+.terminal-body .out {
+  color: var(--text);
+  padding-left: 1.2rem;
+}
+
+.green-text {
+  color: var(--green) !important;
+}
+
+/* CURSOR PISCANDO */
+.blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* =============================================
+   HEADER DE SEÇÃO (padrão para todas as seções)
+============================================= */
+section {
+  padding: 5rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.section-header {
+  margin-bottom: 3rem;
+}
+
+.section-cmd {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 0.5rem;
+}
+
+.section-header h2 {
+  color: var(--green);
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+/* =============================================
+   SEÇÃO SOBRE
+============================================= */
+.sobre-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.sobre-text p {
+  margin-bottom: 1rem;
+  color: var(--text);
+  line-height: 1.9;
+}
+
+/* ITENS DE INFO (formação, localização, etc.) */
+.info-item {
+  margin-bottom: 1.2rem;
+  border-left: 2px solid var(--green);
+  padding-left: 1rem;
+}
+
+.info-label {
+  display: block;
+  color: var(--green);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.2rem;
+}
+
+.info-value {
+  display: block;
+  color: var(--text);
+  font-size: 13px;
+}
+
+/* =============================================
+   SEÇÃO HABILIDADES
+============================================= */
+.skills-grid {
+  display: grid;
+  /* 3 colunas em telas grandes, responsivo abaixo */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-category {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  transition: border-color 0.2s;
+}
+
+.skill-category:hover {
+  border-color: var(--green);
+}
+
+.skill-cat-title {
+  color: var(--green);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.skill-category ul {
+  list-style: none;
+}
+
+.skill-category ul li {
+  color: var(--text);
+  font-size: 13px;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.skill-category ul li:last-child {
+  border-bottom: none;
+}
+
+/* PREFIXO ">" nos itens de skill */
+.skill-category ul li::before {
+  content: '> ';
+  color: var(--green);
+}
+
+/* =============================================
+   SEÇÃO CERTIFICAÇÕES
+============================================= */
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.cert-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  transition: border-color 0.2s, transform 0.2s;
+  position: relative;
+}
+
+.cert-card:hover {
+  border-color: var(--green);
+  transform: translateY(-2px);
+}
+
+/* NÍVEL DA CERTIFICAÇÃO (OURO / PRATA) */
+.cert-level {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  padding: 0.2rem 0.6rem;
+  margin-bottom: 0.8rem;
+  display: inline-block;
+  font-weight: 700;
+}
+
+/* Cores dos selos */
+.cert-level.gold {
+  color: #f5c518;
+  border: 1px solid #f5c518;
+}
+
+.cert-level.silver {
+  color: #aaaaaa;
+  border: 1px solid #aaaaaa;
+}
+
+/* SE ADICIONAR BRONZE, use: */
+/* .cert-level.bronze { color: #cd7f32; border: 1px solid #cd7f32; } */
+
+.cert-name {
+  color: var(--text);
+  font-size: 13px;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.cert-issuer {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+/* =============================================
+   SEÇÃO PROJETOS
+============================================= */
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  padding: 1.5rem 2rem;
+  transition: border-color 0.2s;
+}
+
+.project-card:hover {
+  border-color: var(--green);
+  background: var(--bg3);
+}
+
+.project-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.project-id {
+  color: var(--green);
+  font-size: 11px;
+  opacity: 0.6;
+}
+
+.project-title {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  flex: 1;
+}
+
+.project-year {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.project-desc {
+  color: var(--text);
+  font-size: 13px;
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  max-width: 700px;
+}
+
+/* TAGS DOS PROJETOS */
+.project-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.8rem;
+}
+
+.tag {
+  font-size: 11px;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+
+.project-link {
+  font-size: 12px;
+  color: var(--green);
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+/* =============================================
+   SEÇÃO CONTATO
+============================================= */
+.contato-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.contato-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  color: var(--text);
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.contato-card:hover {
+  border-color: var(--green);
+  color: var(--text);
+  transform: translateY(-2px);
+}
+
+.contato-icon {
+  color: var(--green);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.contato-label {
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.3rem;
+}
+
+.contato-value {
+  color: var(--text);
+  font-size: 12px;
+  word-break: break-all;
+}
+
+/* =============================================
+   RODAPÉ
+============================================= */
+footer {
+  padding: 2rem 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.prompt {
+  color: var(--green);
+}
+
+.footer-status {
+  margin-top: 0.5rem;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  opacity: 0.5;
+}
+
+/* =============================================
+   RESPONSIVIDADE (celulares e tablets)
+============================================= */
+
+/* Tablet */
+@media (max-width: 900px) {
+  #hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 3rem 0;
+  }
+
+  .hero-right {
+    display: none; /* esconde terminal em telas menores */
+  }
+
+  .sobre-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Celular */
+@media (max-width: 600px) {
+  #main {
+    padding: 0 1rem;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  #navbar ul {
+    gap: 1rem;
+  }
+
+  #hero h1 {
+    font-size: 2rem;
+  }
+
+  .project-header {
+    flex-wrap: wrap;
+  }
+}
