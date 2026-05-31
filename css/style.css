@@ -144,6 +144,17 @@ a:hover { color: var(--green-dark); }
   transform: translateY(0);
 }
 
+/* NOME COMPLETO abaixo dos blocos */
+.hero-fullname {
+  font-size: clamp(0.9rem, 2vw, 1.3rem);
+  color: var(--muted);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-top: 0.6rem;
+  margin-bottom: 0.2rem;
+  font-weight: 400;
+}
+
 /* BARRA DE SUBTÍTULO abaixo do título em blocos */
 .hero-subtitle-bar {
   display: flex;
